@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{livre.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      {{livre.name}}
+    </ion-card-header>
+    <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button
+                  [disabled]="!livre.statut"
+                  (click)="onToggle()">Rendre</button>
+        </ion-col>
+        <ion-col>
+          <button
+                  [disabled]="livre.statut"
+                  (click)="onToggle()">Préter</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

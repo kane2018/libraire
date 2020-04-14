@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Livres</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+
+    </ion-item>
+  </ion-list>
+<ion-button *ngFor="let livre of livres, let i = index" [routerLink]="['/livre', i]">{{livre.name}}</ion-button>
+</ion-content>
